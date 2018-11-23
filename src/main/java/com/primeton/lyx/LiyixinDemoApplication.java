@@ -13,7 +13,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @MapperScan("com.primeton.lyx.dao")
 public class LiyixinDemoApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { 
 		SpringApplication.run(LiyixinDemoApplication.class, args);
 	}
 }
