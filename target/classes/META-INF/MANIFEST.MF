@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: liyixin-demo
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 李一新
+Implementation-Vendor-Id: com.primeton.demo
+Build-Jdk: 1.8.0_131
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/liyixin-demo
+Created-By: Maven Integration for Eclipse
+

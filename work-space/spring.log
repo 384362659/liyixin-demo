@@ -1,0 +1,1159 @@
+2018-11-19 === [HikariPool-1 housekeeper] === WARN  === com.zaxxer.hikari.pool.HikariPool ==== HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m27s989ms980µs59ns).
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 8600 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$aed6d50b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1737 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === ERROR === org.apache.catalina.util.LifecycleBase ==== Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.primeton.lyx.LiyixinDemoApplication.main(LiyixinDemoApplication.java:17)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 14 common frames omitted
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Stopping service [Tomcat]
+2018-11-19 === [main] === INFO  === o.s.b.a.l.ConditionEvaluationReportLoggingListener ==== 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-19 === [main] === ERROR === o.s.b.diagnostics.LoggingFailureAnalysisReporter ==== 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 7368 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7d8bc096] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1798 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === ERROR === org.apache.catalina.util.LifecycleBase ==== Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.primeton.lyx.LiyixinDemoApplication.main(LiyixinDemoApplication.java:17)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 14 common frames omitted
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Stopping service [Tomcat]
+2018-11-19 === [main] === INFO  === o.s.b.a.l.ConditionEvaluationReportLoggingListener ==== 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-19 === [main] === ERROR === o.s.b.diagnostics.LoggingFailureAnalysisReporter ==== 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ==== Application shutdown requested.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 8876 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1a5cccfe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 13372 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 5091 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d6b40132] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 4295 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Started LiyixinDemoApplication in 10.548 seconds (JVM running for 12.113)
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === ERROR === org.apache.catalina.util.LifecycleBase ==== Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.primeton.lyx.LiyixinDemoApplication.main(LiyixinDemoApplication.java:17)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 14 common frames omitted
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Stopping service [Tomcat]
+2018-11-19 === [main] === INFO  === o.s.b.a.l.ConditionEvaluationReportLoggingListener ==== 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-19 === [main] === ERROR === o.s.b.diagnostics.LoggingFailureAnalysisReporter ==== 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 23 ms
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === c.p.lyx.exception.GlobalDemoExceptionHandler ==== Restful Http请求发生异常...
+2018-11-19 === [http-nio-8080-exec-1] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== 代码99：Request method 'DELETE' not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'DELETE' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:200)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:400)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:347)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:62)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:401)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1231)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1014)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doDelete(FrameworkServlet.java:923)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:666)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2018-11-19 === [http-nio-8080-exec-1] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== [Ljava.lang.StackTraceElement;@4c4e82c6
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 11932 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e98c53eb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 2777 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === ERROR === org.apache.catalina.util.LifecycleBase ==== Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.primeton.lyx.LiyixinDemoApplication.main(LiyixinDemoApplication.java:17)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 14 common frames omitted
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Stopping service [Tomcat]
+2018-11-19 === [main] === INFO  === o.s.b.a.l.ConditionEvaluationReportLoggingListener ==== 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-19 === [main] === ERROR === o.s.b.diagnostics.LoggingFailureAnalysisReporter ==== 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [http-nio-8080-exec-3] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2018-11-19 === [http-nio-8080-exec-3] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2018-11-19 === [http-nio-8080-exec-8] === INFO  === c.p.lyx.exception.GlobalDemoExceptionHandler ==== Restful Http请求发生异常...
+2018-11-19 === [http-nio-8080-exec-8] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== 代码99：nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.mybatis.spring.MyBatisExceptionTranslator.translateExceptionIfPossible(MyBatisExceptionTranslator.java:79)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:447)
+	at com.sun.proxy.$Proxy67.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:167)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:75)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:53)
+	at com.sun.proxy.$Proxy72.getDepartmentByDepartmentCode(Unknown Source)
+	at com.primeton.lyx.service.DepartmentServiceImpl.getDepartmentByDepartmentCode(DepartmentServiceImpl.java:86)
+	at com.primeton.lyx.service.DepartmentServiceImpl$$FastClassBySpringCGLIB$$105b709a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:746)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.primeton.lyx.service.DepartmentServiceImpl$$EnhancerBySpringCGLIB$$d9d8311f.getDepartmentByDepartmentCode(<generated>)
+	at com.primeton.lyx.controller.DepartmentController.getDepartmentByDepartmentCode(DepartmentController.java:84)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:215)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:142)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:102)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:800)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:890)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:81)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:434)
+	... 70 common frames omitted
+2018-11-19 === [http-nio-8080-exec-8] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== [Ljava.lang.StackTraceElement;@e94e6a7
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 6076 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2f109357] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1951 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === ERROR === org.apache.catalina.util.LifecycleBase ==== Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.primeton.lyx.LiyixinDemoApplication.main(LiyixinDemoApplication.java:17)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 14 common frames omitted
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Stopping service [Tomcat]
+2018-11-19 === [main] === INFO  === o.s.b.a.l.ConditionEvaluationReportLoggingListener ==== 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-19 === [main] === ERROR === o.s.b.diagnostics.LoggingFailureAnalysisReporter ==== 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [http-nio-8080-exec-4] === INFO  === c.p.lyx.exception.GlobalDemoExceptionHandler ==== Restful Http请求发生异常...
+2018-11-19 === [http-nio-8080-exec-4] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== ====00009====
+2018-11-19 === [http-nio-8080-exec-4] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== [Ljava.lang.StackTraceElement;@3604dd13
+2018-11-19 === [http-nio-8080-exec-3] === INFO  === c.p.lyx.exception.GlobalDemoExceptionHandler ==== Restful Http请求发生异常...
+2018-11-19 === [http-nio-8080-exec-3] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== ====00009====
+2018-11-19 === [http-nio-8080-exec-3] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== [Ljava.lang.StackTraceElement;@1cee9116
+2018-11-19 === [http-nio-8080-exec-5] === INFO  === c.p.lyx.exception.GlobalDemoExceptionHandler ==== Restful Http请求发生异常...
+2018-11-19 === [http-nio-8080-exec-5] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== ====00009====
+2018-11-19 === [http-nio-8080-exec-5] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== [Ljava.lang.StackTraceElement;@1625ca84
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 7764 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6867e3e5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1875 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === ERROR === org.apache.catalina.util.LifecycleBase ==== Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.primeton.lyx.LiyixinDemoApplication.main(LiyixinDemoApplication.java:17)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 14 common frames omitted
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Stopping service [Tomcat]
+2018-11-19 === [main] === INFO  === o.s.b.a.l.ConditionEvaluationReportLoggingListener ==== 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-19 === [main] === ERROR === o.s.b.diagnostics.LoggingFailureAnalysisReporter ==== 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 8504 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54842cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 2083 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === ERROR === org.apache.catalina.util.LifecycleBase ==== Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.primeton.lyx.LiyixinDemoApplication.main(LiyixinDemoApplication.java:17)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 14 common frames omitted
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Stopping service [Tomcat]
+2018-11-19 === [main] === INFO  === o.s.b.a.l.ConditionEvaluationReportLoggingListener ==== 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-19 === [main] === ERROR === o.s.b.diagnostics.LoggingFailureAnalysisReporter ==== 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 8168 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$71abe0ae] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1735 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === ERROR === org.apache.catalina.util.LifecycleBase ==== Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.primeton.lyx.LiyixinDemoApplication.main(LiyixinDemoApplication.java:17)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 14 common frames omitted
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Stopping service [Tomcat]
+2018-11-19 === [main] === INFO  === o.s.b.a.l.ConditionEvaluationReportLoggingListener ==== 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-19 === [main] === ERROR === o.s.b.diagnostics.LoggingFailureAnalysisReporter ==== 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 13636 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e056b3da] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 2151 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === ERROR === org.apache.catalina.util.LifecycleBase ==== Failed to start component [Connector[HTTP/1.1-8080]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.primeton.lyx.LiyixinDemoApplication.main(LiyixinDemoApplication.java:17)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 14 common frames omitted
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Stopping service [Tomcat]
+2018-11-19 === [main] === INFO  === o.s.b.a.l.ConditionEvaluationReportLoggingListener ==== 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-19 === [main] === ERROR === o.s.b.diagnostics.LoggingFailureAnalysisReporter ==== 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or configure this application to listen on another port.
+
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === com.primeton.lyx.DepartmentServiceApplicationTests ==== Starting DepartmentServiceApplicationTests on DESKTOP-LVFRUMS with PID 10508 (started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.DepartmentServiceApplicationTests ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e428de29] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === INFO  === com.primeton.lyx.DepartmentServiceApplicationTests ==== Started DepartmentServiceApplicationTests in 7.468 seconds (JVM running for 9.254)
+2018-11-19 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2018-11-19 === [main] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2018-11-19 === [Thread-2] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [Thread-2] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2018-11-19 === [Thread-2] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ==== Application shutdown requested.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 10084 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d7d82d60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 2414 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Started LiyixinDemoApplication in 4.612 seconds (JVM running for 5.683)
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 8 ms
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ==== Application shutdown requested.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 5936 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2330cc7f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1758 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Started LiyixinDemoApplication in 3.677 seconds (JVM running for 4.769)
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 8 ms
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ==== Application shutdown requested.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 14332 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c7b43707] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 2211 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Started LiyixinDemoApplication in 4.076 seconds (JVM running for 4.936)
+2018-11-19 === [http-nio-8080-exec-3] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-19 === [http-nio-8080-exec-3] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2018-11-19 === [http-nio-8080-exec-3] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 5 ms
+2018-11-19 === [http-nio-8080-exec-3] === INFO  === c.p.lyx.exception.GlobalDemoExceptionHandler ==== Restful Http请求发生异常...
+2018-11-19 === [http-nio-8080-exec-3] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== 代码99：Request method 'PUT' not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:200)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:400)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:347)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:62)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:401)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1231)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1014)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:912)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2018-11-19 === [http-nio-8080-exec-3] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== [Ljava.lang.StackTraceElement;@72f3a9ea
+2018-11-19 === [http-nio-8080-exec-6] === INFO  === c.p.lyx.exception.GlobalDemoExceptionHandler ==== Restful Http请求发生异常...
+2018-11-19 === [http-nio-8080-exec-6] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== 代码99：Request method 'PUT' not supported
+org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' not supported
+	at org.springframework.web.servlet.mvc.method.RequestMappingInfoHandlerMapping.handleNoMatch(RequestMappingInfoHandlerMapping.java:200)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lookupHandlerMethod(AbstractHandlerMethodMapping.java:400)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:347)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.getHandlerInternal(AbstractHandlerMethodMapping.java:62)
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.getHandler(AbstractHandlerMapping.java:401)
+	at org.springframework.web.servlet.DispatcherServlet.getHandler(DispatcherServlet.java:1231)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1014)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:998)
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:912)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:663)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:875)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:89)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:199)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:770)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2018-11-19 === [http-nio-8080-exec-6] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== [Ljava.lang.StackTraceElement;@1c805bf6
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ==== Application shutdown requested.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 9800 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e37804cb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 8080 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1609 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 8080 (http) with context path ''
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Started LiyixinDemoApplication in 3.371 seconds (JVM running for 4.475)
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 5 ms
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2018-11-19 === [http-nio-8080-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ==== Application shutdown requested.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 12148 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3e309885] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 12283 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 1811 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 12283 (http) with context path ''
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Started LiyixinDemoApplication in 3.908 seconds (JVM running for 4.782)
+2018-11-19 === [http-nio-12283-exec-2] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-19 === [http-nio-12283-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2018-11-19 === [http-nio-12283-exec-2] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 16 ms
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 10092 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1d788e33] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 12283 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 2068 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === ERROR === org.apache.catalina.util.LifecycleBase ==== Failed to start component [Connector[HTTP/1.1-12283]]
+org.apache.catalina.LifecycleException: Protocol handler start failed
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.addConnector(StandardService.java:225)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.addPreviouslyRemovedConnectors(TomcatWebServer.java:259)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.start(TomcatWebServer.java:197)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.startWebServer(ServletWebServerApplicationContext.java:300)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.primeton.lyx.LiyixinDemoApplication.main(LiyixinDemoApplication.java:17)
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.Net.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(Unknown Source)
+	at sun.nio.ch.ServerSocketAdaptor.bind(Unknown Source)
+	at org.apache.tomcat.util.net.NioEndpoint.initServerSocket(NioEndpoint.java:236)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:210)
+	at org.apache.tomcat.util.net.AbstractEndpoint.start(AbstractEndpoint.java:1108)
+	at org.apache.coyote.AbstractProtocol.start(AbstractProtocol.java:550)
+	at org.apache.catalina.connector.Connector.startInternal(Connector.java:957)
+	... 14 common frames omitted
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Stopping service [Tomcat]
+2018-11-19 === [main] === INFO  === o.s.b.a.l.ConditionEvaluationReportLoggingListener ==== 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2018-11-19 === [main] === ERROR === o.s.b.diagnostics.LoggingFailureAnalysisReporter ==== 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 12283 failed to start. The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 12283, or configure this application to listen on another port.
+
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ==== Application shutdown requested.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 2772 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a11b3df] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 12283 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 2475 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 12283 (http) with context path ''
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Started LiyixinDemoApplication in 4.687 seconds (JVM running for 5.781)
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ==== Application shutdown requested.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Starting LiyixinDemoApplication on DESKTOP-LVFRUMS with PID 10332 (D:\javaCode\eclipse-workspace\liyixin-demo\target\classes started by 李一新 in D:\javaCode\eclipse-workspace\liyixin-demo)
+2018-11-19 === [main] === DEBUG === com.primeton.lyx.LiyixinDemoApplication ==== Running with Spring Boot v2.1.0.RELEASE, Spring v5.1.2.RELEASE
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== No active profile set, falling back to default profiles: default
+2018-11-19 === [main] === INFO  === o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker ==== Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d7d82d60] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat initialized with port(s): 12283 (http)
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardService ==== Starting service [Tomcat]
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.StandardEngine ==== Starting Servlet Engine: Apache Tomcat/9.0.12
+2018-11-19 === [main] === INFO  === org.apache.catalina.core.AprLifecycleListener ==== The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [D:\jdk\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:/jdk/bin/server;D:/jdk/bin;D:/jdk/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\MySQL\MySQL Server 5.6\bin;D:\node.js;C:\Users\李一新\AppData\Local\Microsoft\WindowsApps;C:\Users\李一新\AppData\Roaming\npm;D:\eclipse;;.]
+2018-11-19 === [main] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring embedded WebApplicationContext
+2018-11-19 === [main] === INFO  === org.springframework.web.context.ContextLoader ==== Root WebApplicationContext: initialization completed in 2292 ms
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.ServletRegistrationBean ==== Servlet dispatcherServlet mapped to [/]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'characterEncodingFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'formContentFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.boot.web.servlet.FilterRegistrationBean ==== Mapping filter: 'requestContextFilter' to: [/*]
+2018-11-19 === [main] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Initializing ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Context refreshed
+2018-11-19 === [main] === INFO  === s.d.s.web.plugins.DocumentationPluginsBootstrapper ==== Found 1 custom documentation plugin(s)
+2018-11-19 === [main] === INFO  === s.d.spring.web.scanners.ApiListingReferenceScanner ==== Scanning for api listing references
+2018-11-19 === [main] === INFO  === o.s.boot.web.embedded.tomcat.TomcatWebServer ==== Tomcat started on port(s): 12283 (http) with context path ''
+2018-11-19 === [main] === INFO  === com.primeton.lyx.LiyixinDemoApplication ==== Started LiyixinDemoApplication in 4.673 seconds (JVM running for 5.823)
+2018-11-19 === [http-nio-12283-exec-1] === INFO  === o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] ==== Initializing Spring DispatcherServlet 'dispatcherServlet'
+2018-11-19 === [http-nio-12283-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Initializing Servlet 'dispatcherServlet'
+2018-11-19 === [http-nio-12283-exec-1] === INFO  === org.springframework.web.servlet.DispatcherServlet ==== Completed initialization in 20 ms
+2018-11-19 === [http-nio-12283-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Starting...
+2018-11-19 === [http-nio-12283-exec-1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Start completed.
+2018-11-19 === [http-nio-12283-exec-1] === DEBUG === com.primeton.lyx.dao.IUserMapper.getUserById ==== ==>  Preparing: SELECT NAME,PASSWORD,DEPARTMENTCODE,CREATED_USER CREATEDUSER,CREATED_TIME CREATEDTIME,MODIFIED_USER MODIFIEDUSER,MODIFIED_TIME MODIFIEDTIME FROM USER WHERE ID=? 
+2018-11-19 === [http-nio-12283-exec-1] === DEBUG === com.primeton.lyx.dao.IUserMapper.getUserById ==== ==> Parameters: 3(Integer)
+2018-11-19 === [http-nio-12283-exec-1] === TRACE === com.primeton.lyx.dao.IUserMapper.getUserById ==== <==    Columns: NAME, PASSWORD, DEPARTMENTCODE, CREATEDUSER, CREATEDTIME, MODIFIEDUSER, MODIFIEDTIME
+2018-11-19 === [http-nio-12283-exec-1] === TRACE === com.primeton.lyx.dao.IUserMapper.getUserById ==== <==        Row: jackson2, 111111, null, jackson2, 2018-11-19, jackson2, 2018-11-19
+2018-11-19 === [http-nio-12283-exec-1] === DEBUG === com.primeton.lyx.dao.IUserMapper.getUserById ==== <==      Total: 1
+2018-11-19 === [http-nio-12283-exec-1] === INFO  === c.p.lyx.exception.GlobalDemoExceptionHandler ==== Restful Http请求发生异常...
+2018-11-19 === [http-nio-12283-exec-1] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== ====00005====
+2018-11-19 === [http-nio-12283-exec-1] === ERROR === c.p.lyx.exception.GlobalDemoExceptionHandler ==== [Ljava.lang.StackTraceElement;@657e6760
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin ==== Application shutdown requested.
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==== Shutting down ExecutorService 'applicationTaskExecutor'
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown initiated...
+2018-11-19 === [RMI TCP Connection(2)-127.0.0.1] === INFO  === com.zaxxer.hikari.HikariDataSource ==== HikariPool-1 - Shutdown completed.
