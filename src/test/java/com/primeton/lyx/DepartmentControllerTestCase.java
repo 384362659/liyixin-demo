@@ -23,19 +23,19 @@ public class DepartmentControllerTestCase {
 		this.testModifyDepartment();
 	}
 	public void testCreateDepartment() {
-		Department department=new Department("4","法律部","2");
+		Department department=new Department("6","法律部","2");
 		ResponseResult<Department>rr=departmentController.createDepartment(department);
 		Assert.assertEquals((Integer)rr.getState(),(Integer)1);
 	}
 	public void testModifyDepartment() {
 		Department department=new Department();
 		department.setDname("领导部");
-		department.setDepartmentCode("4");
+		department.setDepartmentCode("6");
 		ResponseResult<Department>rr=departmentController.modifyDepartment(department);
 		Assert.assertEquals((Integer)rr.getState(),(Integer)1);
 	}
 	public void testRemoveDepartment() {
-		ResponseResult<Void>rr=departmentController.removeDepartment("4");
+		ResponseResult<Void>rr=departmentController.removeDepartment("6");
 		Assert.assertEquals((Integer)rr.getState(),(Integer)1);
 	}
 }

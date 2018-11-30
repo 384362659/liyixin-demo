@@ -32,6 +32,7 @@ public class UserControllerTestCase {
 	/**
 	 * 添加用户方法
 	 */
+	@Test
 	public void testCreateUser() {
 		User user=new User("petter","7771111","2");
 		ResponseResult<User>rr=userController.createUser(user);

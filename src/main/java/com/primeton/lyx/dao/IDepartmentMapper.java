@@ -24,7 +24,7 @@ public interface IDepartmentMapper {
 	 */
 	@Options(useGeneratedKeys=true,keyProperty="departmentId",keyColumn="departmentId")
 	@Insert("INSERT INTO "
-			+ "DEPARTMENT"
+			+ "LYX_DEPARTMENT"
 			+ "(DEPARTMENTCODE,DNAME,UPDEPARTMENTCODE) "
 			+ "VALUES"
 			+ "(#{departmentCode}, #{dname}, #{updepartmentCode})")
@@ -34,7 +34,7 @@ public interface IDepartmentMapper {
 	 * @param departmentCode 部门号
 	 * @return 受影响行数
 	 */
-	@Delete("DELETE FROM DEPARTMENT WHERE DEPARTMENTCODE=#{departmentCode}  ")
+	@Delete("DELETE FROM LYX_DEPARTMENT WHERE DEPARTMENTCODE=#{departmentCode}  ")
 	public Integer deleteDepartment(String departmentCode);
 	/**
 	 * 根据部门号修改部门名称
@@ -42,7 +42,7 @@ public interface IDepartmentMapper {
 	 * @param departmentCode 部门号
 	 * @return 受影响行数
 	 */
-	@Update("UPDATE DEPARTMENT SET DNAME=#{dname} WHERE DEPARTMENTCODE=#{departmentCode}")
+	@Update("UPDATE LYX_DEPARTMENT SET DNAME=#{dname} WHERE DEPARTMENTCODE=#{departmentCode}")
 	public Integer updateDepartment(@Param("dname")String dname,@Param("departmentCode")String departmentCode);
 	/**
 	 * 
@@ -50,21 +50,21 @@ public interface IDepartmentMapper {
 	 * @param departmentCode 部门号
 	 * @return 部门对象
 	 */
-	@Select("SELECT DEPARTMENTID,DEPARTMENTCODE,DNAME,UPDEPARTMENTCODE FROM DEPARTMENT WHERE DEPARTMENTCODE=#{departmentCode}")
+	@Select("SELECT DEPARTMENTID,DEPARTMENTCODE,DNAME,UPDEPARTMENTCODE FROM LYX_DEPARTMENT WHERE DEPARTMENTCODE=#{departmentCode}")
 	public Department getDepartmentByDepartmentCode(String departmentCode);
 	/**
 	 * 根据部门名称查询部门
 	 * @param dname 部门名称
 	 * @return 部门对象
 	 */
-	@Select("SELECT DEPARTMENTID,DEPARTMENTCODE,DNAME,UPDEPARTMENTCODE FROM DEPARTMENT WHERE DNAME=#{dname}")
+	@Select("SELECT DEPARTMENTID,DEPARTMENTCODE,DNAME,UPDEPARTMENTCODE FROM LYX_DEPARTMENT WHERE DNAME=#{dname}")
 	public Department getDepartmentByDname(String dname);
 	/**
 	 * 根据上级部门号查询子集部门
 	 * @param updepartmentCode 上级部门号
 	 * @return 部门对象集合
 	 */
-	@Select("SELECT DEPARTMENTID,DNAME,DEPARTMENTCODE,UPDEPARTMENTCODE FROM DEPARTMENT WHERE UPDEPARTMENTCODE=#{updepartmentCode}")
+	@Select("SELECT DEPARTMENTID,DNAME,DEPARTMENTCODE,UPDEPARTMENTCODE FROM LYX_DEPARTMENT WHERE UPDEPARTMENTCODE=#{updepartmentCode}")
 	public List<Department> querydownByupDepartmentCode(String updepartmentCode);
 	/**
 	 * 根据部门号查询部门员工
@@ -75,9 +75,9 @@ public interface IDepartmentMapper {
 			+ " U.ID, U.NAME,U.DEPARTMENTCODE,U.CREATED_USER CREATEDUSER,U.CREATED_TIME CREATEDTIME, "
 			+ "U.MODIFIED_TIME MODIFIEDTIME,U.MODIFIED_USER MODIFIEDUSER "
 			+ "FROM "
-			+ "USER U "
+			+ "LYX_USER U "
 			+ "JOIN "
-			+ " DEPARTMENT D "
+			+ " LYX_DEPARTMENT D "
 			+ "ON "
 			+ "(U.DEPARTMENTCODE = D.DEPARTMENTCODE) "
 			+ "WHERE "
@@ -88,15 +88,15 @@ public interface IDepartmentMapper {
 	 * @param dname
 	 * @return
 	 */
-	@Select("SELECT DEPARTMENTID,DEPARTMENTCODE,DNAME,UPDEPARTMENTCODE FROM DEPARTMENT WHERE DNAME LIKE #{dname}")
+	@Select("SELECT DEPARTMENTID,DEPARTMENTCODE,DNAME,UPDEPARTMENTCODE FROM LYX_DEPARTMENT WHERE DNAME LIKE #{dname}")
 	public List<Department>queryByLikeName(String dname);
 	@Select("SELECT"
 			+ " U.ID,D.DNAME, U.NAME,U.DEPARTMENTCODE,U.CREATED_USER CREATEDUSER,U.CREATED_TIME CREATEDTIME, "
 			+ "U.MODIFIED_TIME MODIFIEDTIME,U.MODIFIED_USER MODIFIEDUSER "
 			+ "FROM "
-			+ "USER U "
+			+ "LYX_USER U "
 			+ "JOIN "
-			+ " DEPARTMENT D "
+			+ " LYX_DEPARTMENT D "
 			+ "ON "
 			+ "(U.DEPARTMENTCODE = D.DEPARTMENTCODE) "
 			+ "WHERE "
