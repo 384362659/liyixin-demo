@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.primeton.lyx.model.Department;
 import com.primeton.lyx.model.ResponseResult;
+import com.primeton.lyx.model.User;
 import com.primeton.lyx.service.IDepartmentService;
 
 import io.swagger.annotations.Api;
@@ -95,5 +96,31 @@ public class DepartmentController {
 		rr=new ResponseResult<List<Department>>(ResponseResult.STATE_OK,data);
 		return rr;
 	}
-	
+	@ApiOperation("通过部门名称查找部门信息")
+	@GetMapping("/actions/get")
+	public ResponseResult<Department>getDepartmentByDname(@ApiParam("部门名称")String dname){
+		ResponseResult<Department>rr;
+		Department data=departmentService.getDepartmentByDname(dname);
+		rr=new ResponseResult<Department>(ResponseResult.STATE_OK,data);
+		return rr;
+	}
+	@ApiOperation("通过部门名模糊查找部门信息")
+	@GetMapping("/actions/query")
+	public ResponseResult<List<Department>> queryDepartmentsByName(
+			@ApiParam("部门名称")String dname,
+			@RequestParam(value = "page", defaultValue = "0") Integer page,
+			@RequestParam(value = "size", defaultValue = "0") Integer size){
+		ResponseResult<List<Department>>rr;
+		List<Department>data=departmentService.queryByLikename(dname, page, size);
+		rr=new ResponseResult<List<Department>>(ResponseResult.STATE_OK,data);
+		return rr;
+	}
+	@ApiOperation("通过部门名查找用户信息")
+	@GetMapping("/actions/queryUsers")
+	public ResponseResult<List<User>> queryUserByDname(@ApiParam("部门名称")String dname){
+		ResponseResult<List<User>>rr;
+		List<User> data=departmentService.queryUserByDname(dname);
+		rr=new ResponseResult<List<User>>(ResponseResult.STATE_OK,data);
+		return rr;
+	}
 }

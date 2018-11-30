@@ -1,11 +1,13 @@
 package com.primeton.lyx.service;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.github.pagehelper.PageHelper;
 import com.primeton.lyx.dao.IUserMapper;
 import com.primeton.lyx.enums.CustomEnum;
 import com.primeton.lyx.exception.DemoException;
@@ -106,6 +108,12 @@ public class UserServiceImpl implements IUserService {
 
 	public User getUserById(Integer id) {
 		return userMapper.getUserById(id);
+	}
+
+	@Override
+	public List<User> queryByLikename(String name, Integer page, Integer size) {
+		PageHelper.startPage(page, size);
+		return userMapper.queryUsersByKeyWord("%"+name+"%");
 	}
 
 }

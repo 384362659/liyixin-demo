@@ -1,6 +1,7 @@
 package com.primeton.lyx.dao;
 
 import java.util.Date;
+import java.util.List;
 
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
@@ -66,6 +67,13 @@ public interface IUserMapper {
 	@Select("SELECT ID,NAME,PASSWORD,DEPARTMENTCODE,CREATED_USER CREATEDUSER,CREATED_TIME CREATEDTIME,"
 			+ "MODIFIED_USER MODIFIEDUSER,MODIFIED_TIME MODIFIEDTIME FROM USER WHERE ID=#{id}")
 	User getUserById(Integer id) ;
-	
+	/**
+	 * 根据用户名模糊查询用户数据
+	 * @param name
+	 * @return
+	 */
+	@Select("SELECT ID,NAME,PASSWORD,DEPARTMENTCODE,CREATED_USER CREATEDUSER,CREATED_TIME CREATEDTIME,"
+			+ "MODIFIED_USER MODIFIEDUSER,MODIFIED_TIME MODIFIEDTIME FROM USER WHERE NAME LIKE #{name}")
+	List<User>queryUsersByKeyWord(String name);
 }	
 

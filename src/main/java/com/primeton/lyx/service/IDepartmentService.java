@@ -53,6 +53,18 @@ public interface IDepartmentService {
 	 * @return 员工对象集合
 	 */
 	public List<User> queryUserByDepartmentCode(String departmentCode);
-	
-	
+	/**
+	 * 从部门名称查询部门信息
+	 * @param dname 部门名称
+	 * @param page
+	 * @param size
+	 * @return
+	 */
+	public List<Department>queryByLikename(String dname,Integer page,Integer size);
+	/**
+	 * 从部门名称查询员工信息
+	 * @param dname部门信息
+	 * @return 员工对象集合
+	 */
+	public List<User> queryUserByDname(String dname);
 }

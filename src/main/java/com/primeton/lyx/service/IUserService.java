@@ -1,5 +1,7 @@
 package com.primeton.lyx.service;
 
+import java.util.List;
+
 import com.primeton.lyx.model.User;
 /**
  * 用户管理服务层接口
@@ -46,4 +48,12 @@ public interface IUserService {
 	 * @return 员工数据
 	 */
 	public User login(String name,String password);
+	/**
+	 * 根据员工名称模糊查询员工信息
+	 * @param name 员工名称
+	 * @param page
+	 * @param size
+	 * @return
+	 */
+	public List<User> queryByLikename(String name,Integer page,Integer size);
 }

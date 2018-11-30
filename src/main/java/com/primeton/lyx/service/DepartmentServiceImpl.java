@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.github.pagehelper.PageHelper;
 import com.primeton.lyx.dao.IDepartmentMapper;
 import com.primeton.lyx.enums.CustomEnum;
 import com.primeton.lyx.exception.DemoException;
@@ -102,6 +103,18 @@ public class DepartmentServiceImpl implements IDepartmentService {
      */
 	public List<User> queryUserByDepartmentCode(String departmentCode) {
 		return departmentMapper.queryUserByDepartmentCode(departmentCode);
+	}
+	/**
+	 * 根据部门名称模糊查询部门
+	 */
+	public List<Department> queryByLikename(String dname, Integer page, Integer size) {
+		PageHelper.startPage(page, size);
+		return departmentMapper.queryByLikeName("%"+dname+"%");
+	}
+
+	@Override
+	public List<User> queryUserByDname(String dname) {
+		return departmentMapper.queryUserByDname(dname);
 	}
 
 	

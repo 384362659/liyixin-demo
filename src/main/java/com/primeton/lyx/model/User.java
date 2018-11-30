@@ -15,6 +15,13 @@ public class User implements Serializable{
 /**
  * 用户id
  */
+	private String dname;
+	public String getDname() {
+	return dname;
+}
+public void setDname(String dname) {
+	this.dname = dname;
+}
 	private Integer id;
 	/**
 	 * 用户名

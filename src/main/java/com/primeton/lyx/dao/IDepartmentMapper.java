@@ -83,4 +83,23 @@ public interface IDepartmentMapper {
 			+ "WHERE "
 			+ "U.DEPARTMENTCODE=#{departmentCode}")
 	public List<User> queryUserByDepartmentCode(String departmentCode);
+	/**
+	 * 
+	 * @param dname
+	 * @return
+	 */
+	@Select("SELECT DEPARTMENTID,DEPARTMENTCODE,DNAME,UPDEPARTMENTCODE FROM DEPARTMENT WHERE DNAME LIKE #{dname}")
+	public List<Department>queryByLikeName(String dname);
+	@Select("SELECT"
+			+ " U.ID,D.DNAME, U.NAME,U.DEPARTMENTCODE,U.CREATED_USER CREATEDUSER,U.CREATED_TIME CREATEDTIME, "
+			+ "U.MODIFIED_TIME MODIFIEDTIME,U.MODIFIED_USER MODIFIEDUSER "
+			+ "FROM "
+			+ "USER U "
+			+ "JOIN "
+			+ " DEPARTMENT D "
+			+ "ON "
+			+ "(U.DEPARTMENTCODE = D.DEPARTMENTCODE) "
+			+ "WHERE "
+			+ "D.Dname=#{dname}")
+	public List<User> queryUserByDname(String dname);
 }

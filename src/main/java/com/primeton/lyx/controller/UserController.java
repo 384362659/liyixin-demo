@@ -1,5 +1,7 @@
 package com.primeton.lyx.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -97,6 +99,26 @@ public class UserController {
 		ResponseResult<User>rr;
 		User data=userService.getUserById(id);
 		rr=new ResponseResult<User>(ResponseResult.STATE_OK,data);
+		return rr;
+	}
+	@ApiOperation("通过用户名称查找用户信息")
+	@GetMapping("/actions/get")
+	public ResponseResult<User>getUserByName(@ApiParam("用户名称")@RequestParam(value="name")String name){
+		ResponseResult<User>rr;
+		User data=userService.getUserByName(name);
+		rr=new ResponseResult<User>(ResponseResult.STATE_OK,data);
+		return rr;
+	}
+	@ApiOperation("通过用户名模糊查找用户信息")
+	@GetMapping("/actions/query")
+	public ResponseResult<List<User>> queryUsersByUsername(
+			@ApiParam("用户名称")String name,
+			@RequestParam(value = "page", defaultValue = "0") Integer page,
+			@RequestParam(value = "size", defaultValue = "0") Integer size
+			){
+		ResponseResult<List<User>>rr;
+		List<User> data=userService.queryByLikename(name, page, size);
+		rr=new ResponseResult<List<User>>(ResponseResult.STATE_OK,data);
 		return rr;
 	}
 }
